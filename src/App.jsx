@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './index.css';
-
+import KartuMenu from './components/KartuMenu';
 
 const namaPanggilan = "Fadiil Rizky Akbar"
 const N = 23
@@ -15,6 +15,7 @@ function App() {
       <p>{jam < 12 ? 'Selamat Pagi' : 'Selamat Siang'}</p>
       <p>Saldo Awal kantin: Rp {N * 1000}</p>
       <button disabled>Bayar</button>
+      
     </>
   )
 }

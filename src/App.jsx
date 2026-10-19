@@ -8,6 +8,14 @@ const N = 23
 
 function App() {
   const jam = 9
+  const dataMenu = [
+    {id: "1", nama: "Ayam Geprek", harga: 10000 + (N * 100), kategori: "makanan"},
+    {id: "2", nama: "Es Teh Lemon", harga: "6000", kategori: "Minuman"},
+    {id: "3", nama: "Mie Goreng Telur", harga: 12000, kategori: "makanan"},
+    {id: "4", nama: "Ayam Geprek", harga: 10000 + (N * 100), kategori: "makanan"},
+    {id: "5", nama: "Ayam Geprek", harga: 10000 + (N * 100), kategori: "makanan"}
+    
+  ]
 
   return (
     <>
@@ -15,11 +23,13 @@ function App() {
       <p>{jam < 12 ? 'Selamat Pagi' : 'Selamat Siang'}</p>
       <p>Saldo Awal kantin: Rp {N * 1000}</p>
       <button disabled>Bayar</button>
+      <button>Balik Urutan</button>
       <Panel judul={"Menu Hari Ini"}>
-        <KartuMenu nama={"Ayam Geprek"} harga={10000 + (N * 100) }></KartuMenu>
-        <KartuMenu nama={"Es Teh Lemon"} harga={"Rp 6.000"} kategori={"Minuman"}></KartuMenu>
-        <KartuMenu nama={"Mie Goreng Telur"} harga={"Rp 12.000"} kategori={"Makanan"}></KartuMenu>
-
+        {dataMenu.map(x => {
+          return (
+            <KartuMenu key={x.id} nama={x.nama} harga={x.harga} kategori={x.kategori}></KartuMenu>
+          )
+        })}
       </Panel>
     </>
   )

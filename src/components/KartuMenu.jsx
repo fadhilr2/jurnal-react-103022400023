@@ -30,6 +30,7 @@ export default function KartuMenu({nama, harga, kategori}){
                 <p>catatan: </p>
                 <p>{catatan}</p>
             </div>
+            <button>Hapus</button>
         </div>
     )
 }

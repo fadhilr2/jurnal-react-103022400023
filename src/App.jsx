@@ -8,7 +8,6 @@ const N = 23
 
 function App() {
   const jam = 9
-  
 
   return (
     <>
@@ -16,7 +15,6 @@ function App() {
       <p>{jam < 12 ? 'Selamat Pagi' : 'Selamat Siang'}</p>
       <p>Saldo Awal kantin: Rp {N * 1000}</p>
       <button disabled>Bayar</button>
-      
       <Panel judul={"Menu Hari Ini"}>
         <KartuMenu nama={"Ayam Geprek"} harga={10000 + (N * 100) }></KartuMenu>
         <KartuMenu nama={"Es Teh Lemon"} harga={"Rp 6.000"} kategori={"Minuman"}></KartuMenu>
